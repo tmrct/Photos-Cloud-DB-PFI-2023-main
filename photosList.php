@@ -58,13 +58,12 @@ switch ($sortType) {
             $userName = $user->Name;
             $userId = $user->Id;
             $selected = (isset($_GET["owners"]) && $_GET["owners"] == $userId) ? "selected" : "";
-            $userOptions .= "<option value=\"$userId\" $selected>$userName</option>";//Afficher dans la combox le nom selon id
+            $userOptions .= "<option value='$userId' $selected>$userName</option>"; //Afficher dans la combox le nom selon id
         }
         $_SESSION['userOptions'] = $userOptions; //pour que Header y ait acces
 
         if (isset($_GET["owners"])) {
             $ownerId=$_GET["owners"];
-            
             if (!empty($ownerId)) {
                 $list = PhotosTable()->selectWhere("OwnerId = '$ownerId'");
             }

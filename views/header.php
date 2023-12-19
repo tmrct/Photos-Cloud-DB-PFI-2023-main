@@ -80,7 +80,7 @@ if (strcmp($viewName, "photoList") == 0) {
          </a>
         HTML;
 
-    $userOptions = isset($_SESSION['userOptions']) ? $_SESSION['userOptions'] : '';
+    $userOptions = isset($_SESSION['userOptions']) ? $_SESSION['userOptions'] : ''; //les options et les values des affaires
     if ($sortType == "owners") {
         $viewHeadCustom = <<<HTML
             <div class="searchContainer">

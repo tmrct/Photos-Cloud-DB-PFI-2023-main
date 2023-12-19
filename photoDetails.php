@@ -25,7 +25,7 @@ $userLike = count(LikesTable()->selectWhere("UserId = $userId AND PhotoId = $id"
 $photoLikedByConnectedUser = $userLike ? "fa" : "fa-regular"; 
 
 $likesUsersList = ""; // todo DONE
-$allUserLikes = LikesTable()->selectAll();
+$allUserLikes = LikesTable()->selectWhere("PhotoId = '$id'");
 
 foreach ($allUserLikes as $like){
     $userId = $like->UserId;

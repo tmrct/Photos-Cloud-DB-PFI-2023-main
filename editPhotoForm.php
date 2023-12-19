@@ -31,6 +31,12 @@ $viewContent = <<<HTML
             <input type="hidden" name = "Id" value=$id>
             <input type="hidden" name = "CreationDate" value="$creationDate">
             <input type="hidden" name = "OwnerId" value="$ownerId" >
+            <input type="hidden" name="Likes" value="$likes">
+             <!--
+                Je dois mettre un like Hidden parce que lorsque je change de unshared a shared,
+                il y a une soumission du form et doit récupérer la valeur du likes la plus
+                à jour.
+             -->
             <fieldset>
                 <legend>Informations</legend>
                 <input  type="Titre" 

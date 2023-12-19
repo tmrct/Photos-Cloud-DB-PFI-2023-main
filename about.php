@@ -13,6 +13,8 @@ $viewContent = <<<HTML
         </p>
         <p>
             Auteur: Nicolas Chourot
+            <br>
+            Étudiant: Tristan Marcotte
         </p>
         <p>
             Collège Lionel-Groulx, automne 2023

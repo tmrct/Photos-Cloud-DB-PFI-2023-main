@@ -458,6 +458,22 @@ final class MySQLDataBase
     private $conn;
 
     // Ici les réglages pourraient êtres stockés dans un fichier de constantes globales de l'application
+    // public function __construct($dbName, $host, $username, $password) {
+    //     $this->dbName = $dbName;
+    //     $this->host = $host;
+    //     $this->username = $username;
+    //     $this->password = $password;
+    //     $this->autoCommit = true;
+    //     $this->conn = null;
+    // }
+    
+    // public static function getInstance($dbName, $host, $username, $password) {
+    //     if(is_null(self::$_instance)) {
+    //        self::$_instance = new MySQLDataBase($dbName, $host, $username, $password);
+    //     }
+    //     return self::$_instance;
+    // }
+
     public function __construct($dbName)
     {
         $this->host = 'localhost';
@@ -474,6 +490,7 @@ final class MySQLDataBase
         }
         return self::$_instance;
     }
+
 
     ////////////////////////// Database management /////////////////////////////////////
     //
